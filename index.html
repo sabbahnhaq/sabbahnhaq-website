@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sabbah Noor Haq</title>
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand:300,500"
+      rel="stylesheet"
+    />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
+    ></script>
+  </head>
+
+  <body>
+    <section id="header">
+      <!--Navigation Menu-->
+
+      <div class="image"></div>
+      <div class="topnav">
+        <a href="index.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="education.html">Education</a>
+      </div>
+      <br /><br /><br />
+
+      <div class="content-wrap">
+        <h1>
+          Sabbah Noor Haq
+        </h1>
+        <h4>
+          Computer Information Technologist
+        </h4>
+      </div>
+    </section>
+
+    <div class="content-wrap">
+      <h2>
+        About
+      </h2>
+      <br />
+      <h5>
+        Sabbah is a Computer IT residing in Los Angeles, California. She is an
+        upcoming graduate from California State University Northridge where she
+        is working on a Bachelors of Science in Computer Information Technology.
+        Sabbah is passionate about bridging the gap between business and
+        technology while working towards a common goal as a team player.
+        Analyzing problems and inovating fun solutions through the power of
+        technology is what she finds most fulfilling. As an avid learner, she
+        continuously seeks opportunities to learn and gain skills. She is an IT
+        ecompasing skills in network design, web development, cloud computing,
+        systems administration and more. Currently, she is working on getting
+        certifications as well as hands on experience with implementing a
+        variety of AWS services in projects for school and for fun. Information
+        on her coursework and technical projects can be found in the projects
+        and education tabs in the navigation bar
+      </h5>
+      <br />
+
+      <h5>
+        This website was created using various AWS services as a project for fun
+        in order to practice web development as well as enhance her skills in
+        HTML and expirement with universal design and various colors and font
+        styles through CSS. The site provides information on her technical
+        projects, achievements, education, skills, and more. Links to her GitHub
+        and email are provided in the footer below as ways to communicate with
+        her, provide feedback, or just keep in touch. Thank you for visiting!
+      </h5>
+      <br />
+      <h2>Website Architecture</h2>
+      <br />
+
+      <img
+        src="https://cdn.glitch.com/d2542d10-1ec4-4c33-b785-430215a79b45%2FScreen%20Shot%202021-09-04%20at%207.17.01%20PM.png?v=1630808247409"
+        alt="AWS Architecture"
+        class="center"
+        width="200"
+        height="600
+  "
+      />
+      <br />
+      <h7>
+        Figure: This figure shows the architecture of services and how they work
+        together to host sabbahnoorhaq.com
+      </h7>
+            <br />
+      <br />
+      <ol>
+        <li>
+          Users will type in the domain name sabbahnoorhaq.com that was
+          registered using Amazon Route53 DNS service to access the website
+        </li>
+        <li>
+          Traffic goes in and out of the internet gateway attached on the VPC to
+          allow the VPC to communicate with the internet
+        </li>
+        <li>
+          The traffic will be directed through an Application Load Balancer that
+          will send users to the application in one of two Availability Zones
+        </li>
+        <li>
+          The website is hosted on an EC2 instance using the t2.micro instance
+          type
+        </li>
+        <li>
+          The website is replicated into two Availability Zones for high
+          availability meaning if one of the Availability Zones is to go down
+          the website availability will not be affected
+        </li>
+        <li>
+          The website and many components are hosted inside a VPC with the EC2
+          instances being in the public subnet
+        </li>
+        <li>
+          Changes made to the site are automated using the AWS CodePipeline. The
+          applications code is placed inside CodeCommit and all changes and
+          updates made to the site are done automatically instead of manual
+          through the use of CodeDeploy.
+        </li>
+      </ol>
+    </div>
+
+    <footer id="footer">
+      <div class="content-wrap">
+        <div class="contact-info">
+          <!-- Social media and contact links. Add or remove any networks. -->
+          <div>
+            <h4>Let's Keep In Touch!</h4>
+            <a
+              href="mailto:sabbahnhaq@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="far fa-envelope"></i
+            ></a>
+
+            <a
+              href="https://github.com/sabbahnhaq"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-github"></i
+            ></a>
+          </div>
+          <p>Copyright @2021 | Sabbah Noor Haq</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
