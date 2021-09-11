@@ -40,6 +40,15 @@
         </h4>
       </div>
     </section>
+      <div class="content-wrap">
+        <h1>
+          Sabbah Noor Haq
+        </h1>
+        <h4>
+          Computer Information Technologist
+        </h4>
+      </div>
+    </section>
 
     <div class="content-wrap">
       <h2>
@@ -78,10 +87,10 @@
       <br />
 
       <img
-        src="https://cdn.glitch.com/d2542d10-1ec4-4c33-b785-430215a79b45%2FScreen%20Shot%202021-09-04%20at%207.17.01%20PM.png?v=1630808247409"
+        src="https://cdn.glitch.com/d2542d10-1ec4-4c33-b785-430215a79b45%2FScreen%20Shot%202021-09-11%20at%204.17.15%20PM.png?v=1631402443762"
         alt="AWS Architecture"
         class="center"
-        width="200"
+        width="600"
         height="600
   "
       />
@@ -90,7 +99,7 @@
         Figure: This figure shows the architecture of services and how they work
         together to host sabbahnoorhaq.com
       </h7>
-            <br />
+      <br />
       <br />
       <ol>
         <li>
@@ -106,23 +115,20 @@
           will send users to the application in one of two Availability Zones
         </li>
         <li>
+          The website is replicated into two Availability Zones for high
+          availability meaning if one of the Availability Zones is to go down
+          the website availability will not be affected. The website and many
+          components are hosted inside a VPC with the EC2 instances being in the
+          public subnet
+        </li>
+        <li>
           The website is hosted on an EC2 instance using the t2.micro instance
           type
         </li>
         <li>
-          The website is replicated into two Availability Zones for high
-          availability meaning if one of the Availability Zones is to go down
-          the website availability will not be affected
-        </li>
-        <li>
-          The website and many components are hosted inside a VPC with the EC2
-          instances being in the public subnet
-        </li>
-        <li>
-          Changes made to the site are automated using the AWS CodePipeline. The
-          applications code is placed inside CodeCommit and all changes and
-          updates made to the site are done automatically instead of manual
-          through the use of CodeDeploy.
+          In the case that this website meets high traffic and demand, the Auto
+          Scaling Group will scale up and down the capacity as needed so I only
+          pay for what is needed
         </li>
       </ol>
     </div>
@@ -154,225 +160,3 @@
     </footer>
   </body>
 </html>
-
-<style> 
-  #header {
-  background: #202020;
-}
-
-#footer {
-  margin: 50px 0 0 0;
-  background: #202020;
-}
-
-.content-wrap {
-  max-width: 2000px;
-  margin: 0 auto;
-  padding: 50px;
-  overflow: hidden;
-  margin-right: 30 px;
-}
-
-.contact-info a {
-  padding: 10px;
-  display: inline-block;
-}
-
-.column-narrow {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
-.column-wide {
-  width: 70%;
-  float: left;
-  min-height: 225px;
-}
-
-html {
-  box-sizing: border-box;
-}
-
-body {
-  bodypadding: 0;
-  margin: 0;
-  font-family: "Quicksand", sans-serif;
-  font-weight: 300;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-h7,
-ul,
-li{
-  font-weight: 500;
-}
-
-/*Main Title Headings*/
-h1 {
-  color: white;
-  font-size: 50px;
-}
-
-/*Body Title Headings*/
-h2 {
-  color: black;
-  font-size: 37px;
-}
-
-/*Body Title Sub-Headings*/
-h3 {
-  text-align: center;
-  color: black;
-  line-height: 200px;
-  font-size: 30px;
-}
-
-/*Main Title Sub-Headings*/
-h4 {
-  color: white;
-  font-size: 20px;
-}
-
-/*Body*/
-h5 {
-  color: black;
-  font-size: 15px;
-  margin-top: 0;
-  margin: 0;
-  line-height: 2.0;
-}
-
-
-h6 {
-  color: black;
-  font-size: 18px;
-}
-
-
-b {
-  font-size: 20px;
-}
-
-p {
-  color: white;
-}
-
-a {
-  color: white;
-}
-
-ul {
-  color: black;
-  font-size: 15px;
-  margin-top: 0;
-  margin: 0;
-  line-height: 2.0;
-}
-ol {
-  color: black;
-}
-
-li {
-  color: black;
-  font-size: 15px;
-  margin-top: 0;
-  margin: 0;
-  line-height: 2.0;
-}
-
-footer {
-  text-align: center;
-}
-
-/* Navigation Bar */
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
-.topnav {
-  background-color: #202020;
-  overflow: hidden;
-  font-style: bold;
-  float: right;
-}
-
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  font-style: bold;
-}
-
-.topnav a:hover {
-  background-color: white;
-  color: black;
-  font-style: bold;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
-.topnav a.active {
-  background-color: white;
-  color: black;
-  font-style: bold;
-}
-
-.left {
-  float: left;
-}
-
-div.image {
-  float: left;
-}
-nav {
-  float: left;
-}
-
-/* Add padding to containers */
-.container {
-  padding: 20px;
-  background-color: white;
-}
-
-* {
-  box-sizing: inherit;
-  margin: 0;
-  pading: 0;
-}
-
-/*BACKGROUND IMAGE*/
-/*This is where I set the background image to not repeat and so that it covers the entire header bar*/
-.background-image {
-  background: url(
-      https://cdn.glitch.com/5d6e1200-fe9b-447e-94e7-4ce450ce7f19%2FLos%20Angeles.png?v=1583876237733
-    )no-repeat fixed;
-  background-size: cover;
-}
-
-/*This is where I set the transparency to 0.5 meaning half tranparent and opaque I then set the padding to 30 to allow the content in the heading to have 30px space on all sides*/
-.background-color {
-  padding: 30px;
-  background: rgba(154, 148, 187, 0.5);
-}
-
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;
-}
-
-</style>
